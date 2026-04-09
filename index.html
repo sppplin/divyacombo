@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -105,16 +103,16 @@ body{transition:background .35s ease;}
 /* ====== HEADER ====== */
 .site-header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:42px;z-index:200;box-shadow:0 2px 8px rgba(0,0,0,.05);}
 @media(max-width:480px){.site-header{top:40px;}}
-.header-top{max-width:1320px;margin:0 auto;padding:11px 20px;display:flex;align-items:center;gap:16px;}
-.hdr-logo{text-align:center;flex-shrink:0;}
+.header-top{max-width:1320px;margin:0 auto;padding:11px 20px;display:grid;grid-template-columns:220px 1fr 220px;align-items:center;gap:20px;}
+.hdr-logo{text-align:left;flex-shrink:0;}
 .hdr-logo-text{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:var(--green-dark);line-height:1;}
 .hdr-logo-text span{color:var(--green-mid);}
 .hdr-logo-sub{font-size:9.5px;letter-spacing:2.5px;color:var(--gold);text-transform:uppercase;font-weight:500;margin-top:2px;}
-.hdr-search{flex:1;max-width:500px;position:relative;}
+.hdr-search{width:100%;position:relative;margin:0 auto;}
 .hdr-search input{width:100%;padding:9px 42px 9px 16px;border:1.5px solid var(--border);border-radius:24px;font-size:13px;font-family:'DM Sans',sans-serif;background:var(--bg2);outline:none;transition:border .2s;}
 .hdr-search input:focus{border-color:var(--green-mid);}
 .hdr-search button{position:absolute;right:13px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--green-mid);font-size:14px;}
-.hdr-icons{display:flex;gap:20px;align-items:center;margin-left:auto;}
+.hdr-icons{display:flex;gap:20px;align-items:center;justify-content:flex-end;}
 .hdr-icon{position:relative;color:var(--green-dark);font-size:19px;cursor:pointer;transition:color .15s;}
 .hdr-icon:hover{color:var(--green-mid);}
 .hdr-icon-lbl{font-size:9px;display:block;text-align:center;color:var(--text-l);margin-top:2px;font-weight:500;}
@@ -126,14 +124,14 @@ body{transition:background .35s ease;}
 .mob-search-bar.on{display:block!important;}
 
 @media(max-width:768px){
-  .header-top{padding:10px 14px;gap:0;justify-content:space-between;}
+  .header-top{display:flex;padding:10px 14px;gap:0;justify-content:space-between;}
   .hbg{display:flex;align-items:center;justify-content:center;margin-right:0;}
-  .hdr-logo{position:absolute;left:50%;transform:translateX(-50%);pointer-events:auto;cursor:pointer;}
+  .hdr-logo{position:absolute;left:50%;transform:translateX(-50%);pointer-events:auto;cursor:pointer;text-align:center;}
   .hdr-search{display:none;}
   .mob-search-icon{display:flex;align-items:center;}
   .hdr-icons .hdr-icon:not([onclick]):nth-child(1),
   .hdr-icons .hdr-icon:nth-child(2){display:none;}
-  .hdr-icons{gap:14px;margin-left:0;}
+  .hdr-icons{gap:14px;margin-left:0;justify-content:flex-end;}
   /* right side: search + cart */
   .hdr-right-mob{display:flex;align-items:center;gap:14px;}
 }
@@ -308,6 +306,17 @@ body.mode-pooja .hero-wrap{padding-bottom:20px;}
 .ti-icon{width:38px;height:38px;border-radius:50%;border:2px solid var(--green-mid);display:flex;align-items:center;justify-content:center;}
 .ti-icon i{font-size:15px;color:var(--green-mid);}
 .ti-lbl{font-size:12px;font-weight:600;color:var(--green-dark);}
+@media(max-width:600px){
+  .trust-inner{gap:16px;flex-direction:column;}
+  .trust-badge{width:100%;justify-content:center;text-align:center;flex-direction:row;align-items:center;}
+  .trust-badge .tb-text h3{font-size:14px;}
+  .trust-badge .tb-text p{font-size:12px;}
+  .trust-items{width:100%;display:flex;flex-direction:row;overflow-x:auto;gap:12px;flex-wrap:nowrap;padding-bottom:6px;scrollbar-width:none;justify-content:flex-start;}
+  .trust-items::-webkit-scrollbar{display:none;}
+  .ti{flex-direction:column;align-items:center;gap:5px;text-align:center;flex-shrink:0;min-width:70px;}
+  .ti-icon{width:36px;height:36px;}
+  .ti-lbl{font-size:10px;}
+}
 
 /* ====== CONCERN GRID ====== */
 .concern-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
@@ -350,11 +359,18 @@ body.mode-pooja .hero-wrap{padding-bottom:20px;}
 .mlogo-flip{color:#2874f0;}
 
 /* ====== SERVICE ICONS ====== */
-.svc-row{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;padding:24px 20px;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-.svc-item{text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;}
-.svc-icon{width:54px;height:54px;border-radius:50%;border:2px solid var(--border2);display:flex;align-items:center;justify-content:center;background:#fff;}
-.svc-icon i{font-size:20px;color:var(--green-mid);}
-.svc-lbl{font-size:12px;font-weight:600;color:var(--green-dark);}
+.svc-row{display:flex;justify-content:center;align-items:center;gap:0;padding:18px 12px;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.svc-item{flex:1;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px;padding:0 6px;border-right:1px solid var(--border);}
+.svc-item:last-child{border-right:none;}
+.svc-icon{width:44px;height:44px;border-radius:50%;border:2px solid var(--border2);display:flex;align-items:center;justify-content:center;background:#fff;margin:0 auto;}
+.svc-icon i{font-size:18px;color:var(--green-mid);}
+.svc-lbl{font-size:11px;font-weight:600;color:var(--green-dark);line-height:1.2;}
+@media(max-width:480px){
+  .svc-row{padding:14px 8px;}
+  .svc-icon{width:36px;height:36px;}
+  .svc-icon i{font-size:15px;}
+  .svc-lbl{font-size:10px;}
+}
 
 /* ====== SHOP & WATCH ====== */
 .watch-row{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;padding-bottom:8px;}
@@ -669,8 +685,13 @@ footer{background:#1a2a08;color:#cdd8b0;padding:44px 20px 20px;}
 .all-view-inner{max-width:1320px;margin:0 auto;}
 
 /* ====== REVIEWS SIDE TAB ====== */
-.reviews-tab{position:fixed;right:0;top:50%;transform:translateY(-50%);background:var(--green-dark);color:#fff;writing-mode:vertical-rl;text-orientation:mixed;padding:12px 8px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;z-index:150;border-radius:6px 0 0 6px;}
+.reviews-tab{position:fixed;right:0;top:50%;transform:translateY(-50%);background:var(--green-dark);color:#fff;writing-mode:vertical-rl;text-orientation:mixed;padding:12px 8px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;z-index:150;border-radius:6px 0 0 6px;animation:reviews-blink 2.5s ease-in-out infinite;}
 .reviews-tab i{writing-mode:horizontal-tb;font-size:12px;margin-bottom:5px;}
+.reviews-tab:hover{animation:none;background:var(--green-mid);}
+@keyframes reviews-blink{
+  0%,100%{opacity:1;transform:translateY(-50%) scaleX(1);}
+  50%{opacity:.7;transform:translateY(-50%) scaleX(1.08);}
+}
 
 /* ====== TOAST ====== */
 .toast{position:fixed;bottom:86px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--green-dark);color:#fff;padding:10px 22px;border-radius:24px;font-size:13px;font-weight:500;z-index:900;opacity:0;transition:.3s;white-space:nowrap;pointer-events:none;}
@@ -697,9 +718,13 @@ footer{background:#1a2a08;color:#cdd8b0;padding:44px 20px 20px;}
 }
 
 /* ====== WHATSAPP ====== */
-.whatsapp-float{position:fixed;right:16px;bottom:80px;z-index:300;width:50px;height:50px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(37,211,102,.4);cursor:pointer;transition:.2s;}
-.whatsapp-float:hover{transform:scale(1.08);}
+.whatsapp-float{position:fixed;right:16px;bottom:80px;z-index:300;width:50px;height:50px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(37,211,102,.4);cursor:pointer;transition:.2s;animation:wa-pulse 2s ease-in-out infinite;}
+.whatsapp-float:hover{transform:scale(1.12);animation:none;}
 .whatsapp-float i{font-size:24px;color:#fff;}
+@keyframes wa-pulse{
+  0%,100%{box-shadow:0 4px 14px rgba(37,211,102,.4),0 0 0 0 rgba(37,211,102,.5);}
+  50%{box-shadow:0 4px 14px rgba(37,211,102,.4),0 0 0 12px rgba(37,211,102,0);}
+}
 
 /* ====== REVIEWS POPUP ====== */
 .reviews-ov{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:800;display:none;align-items:flex-end;justify-content:center;}
@@ -884,7 +909,7 @@ footer{background:#1a2a08;color:#cdd8b0;padding:44px 20px 20px;}
 
 <!-- ====== COUNTDOWN ====== -->
 <div class="countdown">
-  <span class="cd-lbl">SALE ENDS IN:</span>
+  <span class="cd-lbl" id="countdownLabel">🌿 WELLNESS OFFER FOR:</span>
   <div class="cd-timer">
     <div class="cd-unit"><span class="cd-num" id="cd-d">02</span><span class="cd-lbl2">Days</span></div>
     <span class="cd-sep">:</span>
@@ -936,11 +961,6 @@ footer{background:#1a2a08;color:#cdd8b0;padding:44px 20px 20px;}
       <div class="cat-img" style="background:#fff8e8;">
         <img src="https://cdn-icons-png.flaticon.com/128/10154/10154238.png" alt="Digestive" class="cat-icon">
       </div><p>Digestive</p>
-    </div>
-    <div class="cat-item" onclick="setCat(this,'pooja')">
-      <div class="cat-img" style="background:#fff3e0;">
-        <img src="https://cdn-icons-png.flaticon.com/128/5922/5922805.png" alt="Pooja Items" class="cat-icon">
-      </div><p>Pooja Items</p>
     </div>
     <div class="cat-item" onclick="showSale()">
       <div class="cat-img" style="border-color:var(--orange);background:linear-gradient(135deg,#fff8ee,#ffe0b0);padding:0;overflow:hidden;">
@@ -1017,7 +1037,7 @@ footer{background:#1a2a08;color:#cdd8b0;padding:44px 20px 20px;}
     </div>
 
     <!-- Slide 3: Aastha Pooja Collection -->
-    <div class="hero-slide">
+    <div class="hero-slide pooja-hero-slide">
       <img class="hero-slide-bg" src="https://static.wixstatic.com/media/7fa905_a437ba8f26794242b034bdfd6dc55965~mv2.png" alt="Aastha Premium Pooja Collection">
       <div class="hero-slide-overlay"></div>
       <div class="hs-content">
@@ -1028,10 +1048,10 @@ footer{background:#1a2a08;color:#cdd8b0;padding:44px 20px 20px;}
       </div>
     </div>
 
-    <div class="hero-dots">
+    <div class="hero-dots" id="heroDots">
       <button class="h-dot on" onclick="goSlide(0)"></button>
       <button class="h-dot" onclick="goSlide(1)"></button>
-      <button class="h-dot" onclick="goSlide(2)"></button>
+      <button class="h-dot pooja-hero-dot" onclick="goSlide(2)"></button>
     </div>
   </div>
 
@@ -1236,7 +1256,6 @@ footer{background:#1a2a08;color:#cdd8b0;padding:44px 20px 20px;}
   <div class="market-strip">
     <div class="market-title"><i class="fa-solid fa-store"></i> NOW ON TOP MARKETPLACES</div>
     <div class="market-logos">
-      <span class="mlogo mlogo-nykaa">nykaa</span>
       <span class="mlogo mlogo-amazon">amazon</span>
       <span class="mlogo mlogo-ajio">AJIO</span>
       <span class="mlogo mlogo-flip">flipkart</span>
@@ -1256,6 +1275,10 @@ footer{background:#1a2a08;color:#cdd8b0;padding:44px 20px 20px;}
 <div class="section ayurveda-mode-only">
   <div class="sec-title">SHOP &amp; WATCH</div>
   <div class="watch-row" id="watchRow"></div>
+</div>
+<div class="section pooja-mode-only" style="display:none;">
+  <div class="sec-title" style="font-family:'Playfair Display',serif;color:var(--green-dark);">SHOP &amp; WATCH</div>
+  <div class="watch-row" id="watchRowPooja"></div>
 </div>
 
 <!-- Shop by Health Concern -->
@@ -1953,10 +1976,21 @@ function init() {
       <div class="wcard-thumb">${pibHtml(p,'100%')}<div class="wplay"><i class="fa-solid fa-play"></i></div></div>
       <div class="wcard-info"><p>${p.name}</p><button class="wcard-add" onclick="event.stopPropagation();addToCart(${p.id})">Add To Cart</button></div>
     </div>`).join('');
+  // Pooja watch row
+  const pwr = document.getElementById('watchRowPooja');
+  if(pwr) pwr.innerHTML = PRODUCTS.filter(p=>p.cat==='pooja').map(p=>`
+    <div class="wcard" onclick="openProduct(${p.id})">
+      <div class="wcard-thumb">${pibHtml(p,'100%')}<div class="wplay"><i class="fa-solid fa-play"></i></div></div>
+      <div class="wcard-info"><p>${p.name}</p><button class="wcard-add" onclick="event.stopPropagation();addToCart(${p.id})">Add To Cart</button></div>
+    </div>`).join('');
   // Testi dots
   const dots = document.getElementById('testiDots');
   for(let i=0;i<6;i++) dots.innerHTML+=`<button class="tn-dot${i===0?' on':''}" onclick="setTesti(${i})"></button>`;
   startCountdown(); startSlider();
+  // Initialize slider for ayurveda mode (hide pooja slide)
+  updateSliderMode('ayurveda');
+  // Show welcome popup on first load
+  setTimeout(() => showOfferPopup('ayurveda'), 1500);
 }
 
 // ========================
@@ -2364,11 +2398,28 @@ function closeWishlist(){document.getElementById('wishlistBar').classList.remove
 // ========================
 // HERO SLIDER
 // ========================
-const TOTAL_SLIDES = 3;
+let TOTAL_SLIDES = 2; // starts at 2 (ayurveda hides pooja slide)
+function updateSliderMode(mode){
+  const poojaSlide = document.querySelector('.pooja-hero-slide');
+  const poojaDot = document.querySelector('.pooja-hero-dot');
+  if(mode === 'pooja'){
+    TOTAL_SLIDES = 3;
+    if(poojaSlide) poojaSlide.style.display='';
+    if(poojaDot) poojaDot.style.display='';
+  } else {
+    TOTAL_SLIDES = 2;
+    if(poojaSlide){ poojaSlide.style.display='none'; poojaSlide.classList.remove('on'); }
+    if(poojaDot){ poojaDot.style.display='none'; poojaDot.classList.remove('on'); }
+  }
+  goSlide(0);
+}
 function goSlide(n){
-  n = ((n % TOTAL_SLIDES) + TOTAL_SLIDES) % TOTAL_SLIDES;
-  document.querySelectorAll('.hero-slide').forEach((s,i)=>s.classList.toggle('on',i===n));
-  document.querySelectorAll('.h-dot').forEach((d,i)=>d.classList.toggle('on',i===n));
+  const total = TOTAL_SLIDES;
+  n = ((n % total) + total) % total;
+  const visibleSlides = [...document.querySelectorAll('.hero-slide')].filter(s=>s.style.display!=='none');
+  const visibleDots = [...document.querySelectorAll('.h-dot')].filter(d=>d.style.display!=='none');
+  visibleSlides.forEach((s,i)=>s.classList.toggle('on',i===n));
+  visibleDots.forEach((d,i)=>d.classList.toggle('on',i===n));
   slideIdx=n;
 }
 function startSlider(){setInterval(()=>goSlide((slideIdx+1)%TOTAL_SLIDES),4800);}
@@ -2499,16 +2550,22 @@ function switchMode(mode) {
     if (pfg && !pfg.innerHTML.trim()) {
       pfg.innerHTML = PRODUCTS.filter(p => p.cat === 'pooja').map(renderPCard).join('');
     }
-    // Auto-advance slider to pooja slide
-    goSlide(2);
-  } else {
-    goSlide(0);
   }
+
+  // --- Update countdown label ---
+  const cdLbl = document.getElementById('countdownLabel');
+  if(cdLbl) cdLbl.textContent = mode === 'pooja' ? '🪔 SALE ENDS IN:' : '🌿 WELLNESS OFFER FOR:';
+
+  // --- Update slider for mode ---
+  updateSliderMode(mode);
 
   // --- Back to home view ---
   viewHistory = ['home'];
   showView('home');
   window.scrollTo({top:0,behavior:'smooth'});
+
+  // --- Show offer popup after small delay ---
+  setTimeout(() => showOfferPopup(mode), 600);
 }
 
 function showPooja(type) {
@@ -2593,7 +2650,160 @@ init();
 .popup-box button{width:100%;padding:13px;background:#5C7A2E;color:#fff;border:none;border-radius:10px;font-weight:600;}
 </style>
 
+<!-- ====== OFFER POPUP ====== -->
+<style>
+.offer-popup-ov{
+  position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:1200;
+  display:flex;align-items:center;justify-content:center;padding:20px;
+  opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease;
+}
+.offer-popup-ov.open{opacity:1;visibility:visible;}
+.offer-popup-box{
+  position:relative;background:#fff;border-radius:20px;
+  width:100%;max-width:420px;overflow:hidden;
+  box-shadow:0 24px 60px rgba(0,0,0,.25);
+  transform:translateY(28px) scale(.97);
+  transition:transform .35s cubic-bezier(.22,1,.36,1);
+}
+.offer-popup-ov.open .offer-popup-box{transform:translateY(0) scale(1);}
 
+/* Ayurveda variant */
+.offer-popup-box.ayu-popup .op-header{background:linear-gradient(135deg,#2E4A0E 0%,#5C7A2E 100%);padding:30px 28px 24px;text-align:center;color:#fff;position:relative;}
+.offer-popup-box.ayu-popup .op-badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1.5px;padding:4px 14px;text-transform:uppercase;margin-bottom:12px;color:#fff;}
+.offer-popup-box.ayu-popup .op-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;line-height:1.2;margin-bottom:8px;}
+.offer-popup-box.ayu-popup .op-sub{font-size:13px;opacity:.85;line-height:1.5;}
+.offer-popup-box.ayu-popup .op-discount{font-family:'Playfair Display',serif;font-size:52px;font-weight:700;color:#FFE066;line-height:1;margin:10px 0 4px;}
+.offer-popup-box.ayu-popup .op-discount small{font-size:18px;font-weight:400;color:rgba(255,255,255,.7);font-family:'DM Sans',sans-serif;}
+.offer-popup-box.ayu-popup .op-body{padding:24px 28px;}
+.offer-popup-box.ayu-popup .op-body label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#2E4A0E;margin-bottom:6px;}
+.offer-popup-box.ayu-popup .op-input{width:100%;padding:13px 16px;border:1.5px solid #ddd;border-radius:10px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s;margin-bottom:14px;}
+.offer-popup-box.ayu-popup .op-input:focus{border-color:#5C7A2E;}
+.offer-popup-box.ayu-popup .op-btn{width:100%;padding:14px;background:linear-gradient(135deg,#2E4A0E,#5C7A2E);color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;letter-spacing:.3px;transition:.2s;}
+.offer-popup-box.ayu-popup .op-btn:hover{opacity:.9;}
+.offer-popup-box.ayu-popup .op-coupon-result{display:none;margin-top:14px;background:#f0fbe8;border:1.5px solid #5C7A2E;border-radius:10px;padding:14px 16px;text-align:center;}
+.offer-popup-box.ayu-popup .op-coupon-result .op-code{font-size:22px;font-weight:800;color:#2E4A0E;letter-spacing:3px;font-family:'Playfair Display',serif;}
+.offer-popup-box.ayu-popup .op-coupon-result p{font-size:12px;color:#555;margin-top:4px;}
+.offer-popup-box.ayu-popup .op-skip{text-align:center;margin-top:12px;font-size:12px;color:#999;cursor:pointer;text-decoration:underline;}
+
+/* Pooja variant */
+.offer-popup-box.pooja-popup .op-header{background:linear-gradient(135deg,#4a1a05 0%,#9A4E1A 50%,#E8A80C 100%);padding:30px 28px 24px;text-align:center;color:#fff;position:relative;}
+.offer-popup-box.pooja-popup .op-badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1.5px;padding:4px 14px;text-transform:uppercase;margin-bottom:12px;color:#fff;}
+.offer-popup-box.pooja-popup .op-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;line-height:1.25;margin-bottom:8px;}
+.offer-popup-box.pooja-popup .op-sub{font-size:13px;opacity:.85;line-height:1.5;}
+.offer-popup-box.pooja-popup .op-discount{font-family:'Playfair Display',serif;font-size:52px;font-weight:700;color:#FFE066;line-height:1;margin:10px 0 4px;}
+.offer-popup-box.pooja-popup .op-discount small{font-size:18px;font-weight:400;color:rgba(255,255,255,.7);font-family:'DM Sans',sans-serif;}
+.offer-popup-box.pooja-popup .op-body{padding:24px 28px;}
+.offer-popup-box.pooja-popup .op-body label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#5c2d0a;margin-bottom:6px;}
+.offer-popup-box.pooja-popup .op-input{width:100%;padding:13px 16px;border:1.5px solid #ddd;border-radius:10px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s;margin-bottom:14px;}
+.offer-popup-box.pooja-popup .op-input:focus{border-color:#E8A80C;}
+.offer-popup-box.pooja-popup .op-btn{width:100%;padding:14px;background:linear-gradient(135deg,#4a1a05,#E8A80C);color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;letter-spacing:.3px;transition:.2s;}
+.offer-popup-box.pooja-popup .op-btn:hover{opacity:.9;}
+.offer-popup-box.pooja-popup .op-coupon-result{display:none;margin-top:14px;background:#fff8e7;border:1.5px solid #E8A80C;border-radius:10px;padding:14px 16px;text-align:center;}
+.offer-popup-box.pooja-popup .op-coupon-result .op-code{font-size:22px;font-weight:800;color:#5c2d0a;letter-spacing:3px;font-family:'Playfair Display',serif;}
+.offer-popup-box.pooja-popup .op-coupon-result p{font-size:12px;color:#555;margin-top:4px;}
+.offer-popup-box.pooja-popup .op-skip{text-align:center;margin-top:12px;font-size:12px;color:#999;cursor:pointer;text-decoration:underline;}
+
+/* Close btn */
+.op-close{position:absolute;top:12px;right:12px;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.2);border:none;color:#fff;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s;z-index:2;}
+.op-close:hover{background:rgba(255,255,255,.35);}
+/* Leaf deco */
+.op-deco{position:absolute;font-size:64px;opacity:.08;pointer-events:none;}
+.op-deco-1{top:-10px;left:-10px;}
+.op-deco-2{bottom:-10px;right:-10px;transform:rotate(180deg);}
+</style>
+
+<!-- Ayurveda Offer Popup -->
+<div class="offer-popup-ov" id="offerPopupAyu" onclick="closeOfferOnOverlay(event,'offerPopupAyu')">
+  <div class="offer-popup-box ayu-popup">
+    <div class="op-header">
+      <button class="op-close" onclick="closeOfferPopup('offerPopupAyu')"><i class="fa-solid fa-xmark"></i></button>
+      <span class="op-deco op-deco-1">🌿</span>
+      <span class="op-deco op-deco-2">🌿</span>
+      <div class="op-badge"><i class="fa-solid fa-leaf"></i> &nbsp;Wellness Offer</div>
+      <div class="op-discount">20% <small>OFF</small></div>
+      <div class="op-title">Get Your Wellness Offer!</div>
+      <div class="op-sub">Enter your phone number to unlock your exclusive 20% off coupon on all Ayurvedic products.</div>
+    </div>
+    <div class="op-body">
+      <label for="offerPhoneAyu">Your Mobile Number</label>
+      <input class="op-input" type="tel" id="offerPhoneAyu" maxlength="10" placeholder="Enter 10-digit mobile number">
+      <button class="op-btn" onclick="applyOfferCoupon('ayu')"><i class="fa-solid fa-tag"></i> &nbsp;Get My Coupon</button>
+      <div class="op-coupon-result" id="offerResultAyu">
+        <div style="font-size:12px;color:#555;margin-bottom:6px;">Your exclusive coupon code:</div>
+        <div class="op-code">WELLNESS20</div>
+        <p>Apply at checkout for 20% off your order. Valid for 24 hours.</p>
+      </div>
+      <div class="op-skip" onclick="closeOfferPopup('offerPopupAyu')">No thanks, skip this offer</div>
+    </div>
+  </div>
+</div>
+
+<!-- Pooja Offer Popup -->
+<div class="offer-popup-ov" id="offerPopupPooja" onclick="closeOfferOnOverlay(event,'offerPopupPooja')">
+  <div class="offer-popup-box pooja-popup">
+    <div class="op-header">
+      <button class="op-close" onclick="closeOfferPopup('offerPopupPooja')"><i class="fa-solid fa-xmark"></i></button>
+      <span class="op-deco op-deco-1">🪔</span>
+      <span class="op-deco op-deco-2">🪔</span>
+      <div class="op-badge"><i class="fa-solid fa-fire-flame-curved"></i> &nbsp;Pooja Special</div>
+      <div class="op-discount">20% <small>OFF</small></div>
+      <div class="op-title">Complete Your Pooja Ritual</div>
+      <div class="op-sub">Enter your phone number to receive an exclusive 20% off coupon on all Aastha Pooja products.</div>
+    </div>
+    <div class="op-body">
+      <label for="offerPhonePooja">Your Mobile Number</label>
+      <input class="op-input" type="tel" id="offerPhonePooja" maxlength="10" placeholder="Enter 10-digit mobile number">
+      <button class="op-btn" onclick="applyOfferCoupon('pooja')"><i class="fa-solid fa-hands-praying"></i> &nbsp;Get My Coupon</button>
+      <div class="op-coupon-result" id="offerResultPooja">
+        <div style="font-size:12px;color:#555;margin-bottom:6px;">Your exclusive coupon code:</div>
+        <div class="op-code">POOJA20</div>
+        <p>Apply at checkout for 20% off your order. Valid for 24 hours.</p>
+      </div>
+      <div class="op-skip" onclick="closeOfferPopup('offerPopupPooja')">No thanks, skip this offer</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ====== OFFER POPUP LOGIC ======
+const _shownPopups = new Set();
+
+function showOfferPopup(mode) {
+  const id = mode === 'pooja' ? 'offerPopupPooja' : 'offerPopupAyu';
+  if (_shownPopups.has(id)) return; // don't show again in same session
+  _shownPopups.add(id);
+  document.getElementById(id).classList.add('open');
+}
+
+function closeOfferPopup(id) {
+  document.getElementById(id).classList.remove('open');
+}
+
+function closeOfferOnOverlay(e, id) {
+  if (e.target === document.getElementById(id)) closeOfferPopup(id);
+}
+
+function applyOfferCoupon(type) {
+  const isPooja = type === 'pooja';
+  const phoneEl = document.getElementById(isPooja ? 'offerPhonePooja' : 'offerPhoneAyu');
+  const phone = phoneEl.value.trim();
+  if (!/^\d{10}$/.test(phone)) {
+    phoneEl.style.borderColor = '#e74c3c';
+    phoneEl.placeholder = 'Please enter a valid 10-digit number';
+    setTimeout(() => {
+      phoneEl.style.borderColor = '';
+      phoneEl.placeholder = 'Enter 10-digit mobile number';
+    }, 2000);
+    return;
+  }
+  // Show coupon
+  const resultId = isPooja ? 'offerResultPooja' : 'offerResultAyu';
+  document.getElementById(resultId).style.display = 'block';
+  phoneEl.style.display = 'none';
+  phoneEl.previousElementSibling.style.display = 'none'; // hide label
+  document.querySelector(`#${isPooja ? 'offerPopupPooja' : 'offerPopupAyu'} .op-btn`).style.display = 'none';
+}
+</script>
 
 </body>
 </html>
