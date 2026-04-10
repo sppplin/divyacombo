@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -597,6 +598,216 @@ footer{background:#1a2a08;color:#cdd8b0;padding:44px 20px 20px;}
   .tb-circle i{font-size:18px;}
 }
 
+/* ====== AYURVEDA MID BANNER ====== */
+.ayu-mid-banner{
+  position:relative;
+  width:100%;
+  border-radius:18px;
+  overflow:hidden;
+  min-height:360px;
+  display:flex;
+  align-items:center;
+  box-shadow:0 8px 32px rgba(46,74,14,.18);
+}
+.ayu-banner-img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+.ayu-banner-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(100deg,rgba(10,30,5,0.72) 0%,rgba(10,30,5,0.38) 55%,transparent 100%);
+}
+.ayu-banner-content{
+  position:relative;
+  z-index:3;
+  padding:52px 60px;
+  max-width:600px;
+}
+.ayu-banner-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.3);
+  color:#fff;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  padding:5px 14px;
+  border-radius:20px;
+  margin-bottom:14px;
+  backdrop-filter:blur(4px);
+}
+.ayu-banner-title{
+  font-family:'Playfair Display',serif;
+  font-size:38px;
+  font-weight:700;
+  color:#fff;
+  line-height:1.2;
+  margin-bottom:10px;
+  text-shadow:0 2px 12px rgba(0,0,0,.35);
+}
+.ayu-banner-sub{
+  font-size:13px;
+  color:rgba(255,255,255,.8);
+  margin-bottom:24px;
+  letter-spacing:.3px;
+  font-weight:500;
+}
+.ayu-banner-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:13px 32px;
+  background:var(--green-btn);
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-size:15px;
+  font-weight:700;
+  font-family:'DM Sans',sans-serif;
+  cursor:pointer;
+  transition:.2s;
+  box-shadow:0 4px 18px rgba(46,74,14,.35);
+  letter-spacing:.3px;
+}
+.ayu-banner-btn:hover{
+  background:var(--green-btn-h);
+  transform:translateY(-2px);
+  box-shadow:0 6px 24px rgba(46,74,14,.45);
+}
+@media(max-width:768px){
+  .ayu-mid-banner{min-height:200px;border-radius:14px;}
+  .ayu-banner-content{padding:28px 24px;}
+  .ayu-banner-title{font-size:24px;}
+  .ayu-banner-btn{padding:11px 24px;font-size:13px;}
+}
+@media(max-width:480px){
+  .ayu-mid-banner{min-height:180px;}
+  .ayu-banner-content{padding:22px 18px;}
+  .ayu-banner-title{font-size:20px;}
+  .ayu-banner-sub{font-size:11.5px;}
+}
+@media(min-width:1200px){
+  .ayu-mid-banner{min-height:400px;}
+  .ayu-banner-title{font-size:44px;}
+  .ayu-banner-content{padding:60px 72px;max-width:640px;}
+}
+
+/* ====== KNOW MORE – YOUTUBE SECTION ====== */
+.know-more-section{
+  background:linear-gradient(135deg,#f0fbe8 0%,#e8f5d6 50%,#fafff5 100%);
+  border-top:1px solid var(--border);
+  padding:64px 20px;
+}
+.km-inner{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:56px;
+  align-items:center;
+}
+.km-eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:#FF0000;
+  color:#fff;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  padding:5px 14px;
+  border-radius:20px;
+  margin-bottom:16px;
+}
+.km-title{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  font-weight:700;
+  color:var(--green-dark);
+  line-height:1.2;
+  margin-bottom:14px;
+}
+.km-title span{color:var(--green-mid);}
+.km-desc{
+  font-size:14px;
+  color:var(--text-m);
+  line-height:1.75;
+  margin-bottom:22px;
+}
+.km-points{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-bottom:28px;
+}
+.km-point{
+  font-size:13.5px;
+  color:var(--text-m);
+  display:flex;
+  align-items:center;
+  gap:9px;
+}
+.km-point i{color:var(--green-mid);font-size:14px;flex-shrink:0;}
+.km-yt-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:13px 28px;
+  background:#FF0000;
+  color:#fff;
+  border-radius:8px;
+  font-size:14px;
+  font-weight:700;
+  font-family:'DM Sans',sans-serif;
+  text-decoration:none;
+  transition:.2s;
+  box-shadow:0 4px 16px rgba(255,0,0,.25);
+}
+.km-yt-btn:hover{background:#cc0000;transform:translateY(-2px);}
+.km-video-col{display:flex;flex-direction:column;gap:16px;}
+.km-video-wrap{
+  position:relative;
+  width:100%;
+  padding-bottom:56.25%;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 10px 36px rgba(0,0,0,.15);
+}
+.km-video-wrap iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+.km-yt-badge{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:12px 16px;
+}
+@media(max-width:900px){
+  .km-inner{grid-template-columns:1fr;gap:32px;}
+  .km-title{font-size:26px;}
+}
+@media(max-width:480px){
+  .know-more-section{padding:40px 14px;}
+  .km-title{font-size:22px;}
+}
+
 /* ====== FOUNDER SECTION ====== */
 .founder-section{background:linear-gradient(135deg,#1a3a0a 0%,#2e4a0e 50%,#1a3a0a 100%);padding:64px 20px;position:relative;overflow:hidden;}
 .founder-section::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none;}
@@ -861,7 +1072,7 @@ footer{background:#1a2a08;color:#cdd8b0;padding:44px 20px 20px;}
     <div class="hdr-icons">
       <!-- Mobile search icon -->
       <span class="mob-search-icon" onclick="document.getElementById('mobSearchBar').classList.toggle('on')"><i class="fa-solid fa-magnifying-glass"></i></span>
-      <div class="hdr-icon" title="Account"><i class="fa-regular fa-user"></i></div>
+      <div class="hdr-icon" title="Account" onclick="openAuthModal()" id="accountIcon"><i class="fa-regular fa-user"></i><span class="hdr-icon-lbl" id="accountLbl">Account</span></div>
       <div class="hdr-icon" title="Wishlist" onclick="openWishlist()"><i class="fa-regular fa-heart"></i></div>
       <div class="hdr-icon" onclick="openCart()" title="Cart">
         <i class="fa-solid fa-cart-shopping"></i>
@@ -1008,7 +1219,7 @@ footer{background:#1a2a08;color:#cdd8b0;padding:44px 20px 20px;}
 
 <!-- Hero Slider — Full Width -->
 <div class="hero-wrap">
-  <button class="hero-prev" onclick="goSlide((slideIdx-1+3)%3)"><i class="fa-solid fa-chevron-left"></i></button>
+  <button class="hero-prev" onclick="goSlide((slideIdx-1+TOTAL_SLIDES)%TOTAL_SLIDES)"><i class="fa-solid fa-chevron-left"></i></button>
 
   <div class="hero-slider" id="heroSlider">
 
@@ -1036,7 +1247,31 @@ footer{background:#1a2a08;color:#cdd8b0;padding:44px 20px 20px;}
       </div>
     </div>
 
-    <!-- Slide 3: Aastha Pooja Collection -->
+    <!-- Slide 3: Ayurveda – New Image 1 -->
+    <div class="hero-slide ayurveda-hero-slide">
+      <img class="hero-slide-bg" src="https://static.wixstatic.com/media/7fa905_6d7d59dcdb234377827fb0d22cb061f0~mv2.png" alt="Divya Ayurveda Natural Wellness">
+      <div class="hero-slide-overlay"></div>
+      <div class="hs-content">
+        <div class="hs-tag"><i class="fa-solid fa-leaf"></i> Natural Wellness</div>
+        <h1>Ancient Wisdom,<br>Modern Healing</h1>
+        <div class="hs-disc">Upto 40% <small>OFF</small></div>
+        <button class="btn-hero" onclick="showAll()"><i class="fa-solid fa-cart-shopping"></i> Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Slide 4: Ayurveda – New Image 2 -->
+    <div class="hero-slide ayurveda-hero-slide">
+      <img class="hero-slide-bg" src="https://static.wixstatic.com/media/7fa905_63fdc9999153412196776e83d8f2949c~mv2.png" alt="Divya Ayurveda Pure Herbs">
+      <div class="hero-slide-overlay"></div>
+      <div class="hs-content">
+        <div class="hs-tag"><i class="fa-solid fa-mortar-pestle"></i> Pure Herbs</div>
+        <h1>Pure Ayurveda<br>From Nature's Heart</h1>
+        <div class="hs-disc">GMP Certified</div>
+        <button class="btn-hero" onclick="showAll()"><i class="fa-solid fa-cart-shopping"></i> Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Slide 5: Aastha Pooja Collection -->
     <div class="hero-slide pooja-hero-slide">
       <img class="hero-slide-bg" src="https://static.wixstatic.com/media/7fa905_a437ba8f26794242b034bdfd6dc55965~mv2.png" alt="Aastha Premium Pooja Collection">
       <div class="hero-slide-overlay"></div>
@@ -1051,11 +1286,13 @@ footer{background:#1a2a08;color:#cdd8b0;padding:44px 20px 20px;}
     <div class="hero-dots" id="heroDots">
       <button class="h-dot on" onclick="goSlide(0)"></button>
       <button class="h-dot" onclick="goSlide(1)"></button>
-      <button class="h-dot pooja-hero-dot" onclick="goSlide(2)"></button>
+      <button class="h-dot ayurveda-hero-dot" onclick="goSlide(2)"></button>
+      <button class="h-dot ayurveda-hero-dot" onclick="goSlide(3)"></button>
+      <button class="h-dot pooja-hero-dot" onclick="goSlide(4)"></button>
     </div>
   </div>
 
-  <button class="hero-next" onclick="goSlide((slideIdx+1)%3)"><i class="fa-solid fa-chevron-right"></i></button>
+  <button class="hero-next" onclick="goSlide((slideIdx+1)%TOTAL_SLIDES)"><i class="fa-solid fa-chevron-right"></i></button>
 </div>
 
 <!-- Flash Deals -->
@@ -1137,6 +1374,22 @@ footer{background:#1a2a08;color:#cdd8b0;padding:44px 20px 20px;}
   <div class="sec-title">COMPLETE AASTHA COLLECTION</div>
   <div class="prod-grid" id="poojaAllGrid"></div>
   <div class="view-all-wrap"><button class="btn-va" onclick="showCat('pooja')">VIEW ALL POOJA ITEMS <i class="fa-solid fa-arrow-right"></i></button></div>
+</div>
+
+<!-- Ayurveda Mid Banner -->
+<div class="section ayurveda-mode-only" style="padding:0 20px 10px;">
+  <div class="ayu-mid-banner">
+    <img class="ayu-banner-img" src="https://static.wixstatic.com/media/7fa905_d83dbb73bb724e5eace65703f7b0fc05~mv2.png" alt="Divya Ayurveda Special Offer">
+    <div class="ayu-banner-overlay"></div>
+    <div class="ayu-banner-content">
+      <div class="ayu-banner-tag"><i class="fa-solid fa-leaf"></i> Authentic Ayurveda</div>
+      <h2 class="ayu-banner-title">Heal Naturally,<br>Live Better</h2>
+      <p class="ayu-banner-sub">100% Pure · GMP Certified · Trusted for 30+ Years</p>
+      <button class="ayu-banner-btn" onclick="showAll()">
+        <i class="fa-solid fa-cart-shopping"></i> Buy Now
+      </button>
+    </div>
+  </div>
 </div>
 
 <!-- Shop by Concern -->
@@ -1384,6 +1637,44 @@ footer{background:#1a2a08;color:#cdd8b0;padding:44px 20px 20px;}
       </div>
     </div>
 
+  </div>
+</div>
+
+<!-- ====== KNOW MORE – YOUTUBE SECTION ====== -->
+<div class="know-more-section">
+  <div class="km-inner">
+    <div class="km-text">
+      <div class="km-eyebrow"><i class="fa-brands fa-youtube"></i> &nbsp;Watch & Learn</div>
+      <h2 class="km-title">Know More About<br><span>Divya Ayurveda</span></h2>
+      <p class="km-desc">Discover the science and tradition behind our formulations. Watch how our experts craft each product with pure herbs and ancient Ayurvedic wisdom — directly from our official channel.</p>
+      <div class="km-points">
+        <div class="km-point"><i class="fa-solid fa-circle-check"></i> Authentic Formulations Explained</div>
+        <div class="km-point"><i class="fa-solid fa-circle-check"></i> Expert Health Tips in Hindi</div>
+        <div class="km-point"><i class="fa-solid fa-circle-check"></i> Product Usage Guides</div>
+        <div class="km-point"><i class="fa-solid fa-circle-check"></i> Live Q&A with Ayurvedic Vaidyas</div>
+      </div>
+      <a href="https://www.youtube.com/@PatanjaliAyurvedLtd" target="_blank" class="km-yt-btn">
+        <i class="fa-brands fa-youtube"></i> Visit Our YouTube Channel
+      </a>
+    </div>
+    <div class="km-video-col">
+      <div class="km-video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/videoseries?list=PLrAXtmErZgOdP_8GztsuKi9nrraNbKKp4&autoplay=0&rel=0"
+          title="Divya Ayurveda YouTube"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="km-yt-badge">
+        <i class="fa-brands fa-youtube" style="color:#FF0000;font-size:22px;"></i>
+        <div>
+          <div style="font-size:13px;font-weight:700;color:var(--green-dark);">Official YouTube Channel</div>
+          <div style="font-size:11px;color:var(--text-l);">Subscribe for latest health videos</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -2398,18 +2689,24 @@ function closeWishlist(){document.getElementById('wishlistBar').classList.remove
 // ========================
 // HERO SLIDER
 // ========================
-let TOTAL_SLIDES = 2; // starts at 2 (ayurveda hides pooja slide)
+let TOTAL_SLIDES = 4; // ayurveda: 4 slides; pooja: 3 slides
 function updateSliderMode(mode){
+  const ayuSlides = document.querySelectorAll('.ayurveda-hero-slide');
+  const ayuDots   = document.querySelectorAll('.ayurveda-hero-dot');
   const poojaSlide = document.querySelector('.pooja-hero-slide');
-  const poojaDot = document.querySelector('.pooja-hero-dot');
+  const poojaDot   = document.querySelector('.pooja-hero-dot');
   if(mode === 'pooja'){
     TOTAL_SLIDES = 3;
+    ayuSlides.forEach(s=>{ s.style.display='none'; s.classList.remove('on'); });
+    ayuDots.forEach(d=>{ d.style.display='none'; d.classList.remove('on'); });
     if(poojaSlide) poojaSlide.style.display='';
-    if(poojaDot) poojaDot.style.display='';
+    if(poojaDot)   poojaDot.style.display='';
   } else {
-    TOTAL_SLIDES = 2;
+    TOTAL_SLIDES = 4;
+    ayuSlides.forEach(s=>{ s.style.display=''; });
+    ayuDots.forEach(d=>{ d.style.display=''; });
     if(poojaSlide){ poojaSlide.style.display='none'; poojaSlide.classList.remove('on'); }
-    if(poojaDot){ poojaDot.style.display='none'; poojaDot.classList.remove('on'); }
+    if(poojaDot){   poojaDot.style.display='none';   poojaDot.classList.remove('on'); }
   }
   goSlide(0);
 }
@@ -2703,6 +3000,55 @@ init();
 .offer-popup-box.pooja-popup .op-coupon-result p{font-size:12px;color:#555;margin-top:4px;}
 .offer-popup-box.pooja-popup .op-skip{text-align:center;margin-top:12px;font-size:12px;color:#999;cursor:pointer;text-decoration:underline;}
 
+/* ====== AUTH MODAL ====== */
+.auth-ov{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:600;display:none;align-items:center;justify-content:center;padding:16px;}
+.auth-ov.on{display:flex;}
+.auth-box{background:#fff;border-radius:20px;width:100%;max-width:440px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.25);position:relative;animation:authPop .3s ease;}
+@keyframes authPop{from{transform:scale(.93);opacity:0}to{transform:scale(1);opacity:1}}
+.auth-header{padding:28px 28px 0;text-align:center;}
+.auth-header .auth-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--green-dark);margin-bottom:4px;}
+.auth-header .auth-logo span{color:var(--green-mid);}
+.auth-header p{font-size:13px;color:var(--text-l);margin-bottom:18px;}
+.auth-tabs{display:flex;border-bottom:2px solid var(--border);margin:0 28px;}
+.auth-tab{flex:1;padding:10px;font-size:13px;font-weight:700;text-align:center;cursor:pointer;color:var(--text-l);border:none;background:none;border-bottom:3px solid transparent;margin-bottom:-2px;transition:.2s;letter-spacing:.3px;}
+.auth-tab.active{color:var(--green-dark);border-bottom-color:var(--green-mid);}
+.auth-body{padding:22px 28px 28px;}
+.auth-panel{display:none;}
+.auth-panel.on{display:block;}
+.auth-field{margin-bottom:15px;}
+.auth-field label{display:block;font-size:11px;font-weight:700;letter-spacing:.6px;color:var(--text-m);text-transform:uppercase;margin-bottom:6px;}
+.auth-field input{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;background:var(--bg2);transition:border .2s;color:var(--text);}
+.auth-field input:focus{border-color:var(--green-mid);background:#fff;}
+.auth-field input.err{border-color:var(--red);}
+.auth-err{font-size:12px;color:var(--red);margin-top:4px;display:none;}
+.auth-err.on{display:block;}
+.auth-submit{width:100%;padding:13px;background:linear-gradient(135deg,var(--green-dark),var(--green-mid));color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;letter-spacing:.3px;margin-top:4px;transition:.2s;}
+.auth-submit:hover{opacity:.9;transform:translateY(-1px);}
+.auth-divider{text-align:center;font-size:12px;color:var(--text-l);margin:14px 0;position:relative;}
+.auth-divider::before,.auth-divider::after{content:'';position:absolute;top:50%;width:40%;height:1px;background:var(--border);}
+.auth-divider::before{left:0}.auth-divider::after{right:0}
+.auth-switch{text-align:center;font-size:13px;color:var(--text-m);margin-top:14px;}
+.auth-switch a{color:var(--green-mid);font-weight:600;cursor:pointer;text-decoration:underline;}
+.auth-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:var(--bg3);border:none;font-size:15px;color:var(--text-m);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s;}
+.auth-close:hover{background:var(--border);color:var(--text);}
+.auth-success{text-align:center;padding:20px 0 10px;}
+.auth-success i{font-size:48px;color:var(--green-mid);display:block;margin-bottom:12px;}
+.auth-success h3{font-size:18px;font-weight:700;color:var(--green-dark);margin-bottom:6px;}
+.auth-success p{font-size:13px;color:var(--text-l);}
+.auth-name-display{font-size:12px;font-weight:600;color:var(--green-dark);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:68px;}
+/* User dropdown */
+.user-dropdown{position:absolute;top:calc(100% + 8px);right:0;background:#fff;border:1px solid var(--border);border-radius:12px;min-width:180px;box-shadow:var(--shadow-h);z-index:300;display:none;overflow:hidden;}
+.user-dropdown.on{display:block;}
+.ud-header{padding:12px 14px;background:var(--bg2);border-bottom:1px solid var(--border);}
+.ud-header strong{display:block;font-size:13px;color:var(--green-dark);}
+.ud-header span{font-size:11px;color:var(--text-l);}
+.ud-item{padding:10px 14px;font-size:13px;color:var(--text);cursor:pointer;display:flex;align-items:center;gap:8px;transition:.15s;}
+.ud-item:hover{background:var(--bg2);color:var(--green-dark);}
+.ud-item i{width:16px;text-align:center;color:var(--text-l);}
+.ud-item.logout{color:var(--red);}
+.ud-item.logout i{color:var(--red);}
+.hdr-icon.logged-in{position:relative;}
+
 /* Close btn */
 .op-close{position:absolute;top:12px;right:12px;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.2);border:none;color:#fff;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s;z-index:2;}
 .op-close:hover{background:rgba(255,255,255,.35);}
@@ -2711,6 +3057,80 @@ init();
 .op-deco-1{top:-10px;left:-10px;}
 .op-deco-2{bottom:-10px;right:-10px;transform:rotate(180deg);}
 </style>
+
+<!-- ====== AUTH MODAL ====== -->
+<div class="auth-ov" id="authOverlay" onclick="closeAuthOnOverlay(event)">
+  <div class="auth-box" id="authBox">
+    <button class="auth-close" onclick="closeAuthModal()"><i class="fa-solid fa-xmark"></i></button>
+    <div class="auth-header">
+      <div class="auth-logo">Divya <span>Ayurveda</span></div>
+      <p>Sign in or create your account</p>
+    </div>
+    <div class="auth-tabs">
+      <button class="auth-tab active" id="tabLogin" onclick="switchAuthTab('login')">LOGIN</button>
+      <button class="auth-tab" id="tabRegister" onclick="switchAuthTab('register')">CREATE ACCOUNT</button>
+    </div>
+    <div class="auth-body">
+
+      <!-- LOGIN PANEL -->
+      <div class="auth-panel on" id="panelLogin">
+        <div class="auth-field">
+          <label>Email Address</label>
+          <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email">
+          <div class="auth-err" id="loginEmailErr">Please enter a valid email.</div>
+        </div>
+        <div class="auth-field">
+          <label>Password</label>
+          <input type="password" id="loginPass" placeholder="Enter your password" autocomplete="current-password">
+          <div class="auth-err" id="loginPassErr">Password must be at least 6 characters.</div>
+        </div>
+        <div class="auth-err" id="loginGenErr" style="margin-bottom:10px;"></div>
+        <button class="auth-submit" onclick="doLogin()"><i class="fa-solid fa-right-to-bracket"></i> &nbsp;Login</button>
+        <div class="auth-switch">Don't have an account? <a onclick="switchAuthTab('register')">Create one</a></div>
+      </div>
+
+      <!-- REGISTER PANEL -->
+      <div class="auth-panel" id="panelRegister">
+        <div class="auth-field">
+          <label>Full Name</label>
+          <input type="text" id="regName" placeholder="Your full name" autocomplete="name">
+          <div class="auth-err" id="regNameErr">Please enter your full name.</div>
+        </div>
+        <div class="auth-field">
+          <label>Mobile Number</label>
+          <input type="tel" id="regPhone" maxlength="10" placeholder="10-digit mobile number">
+          <div class="auth-err" id="regPhoneErr">Enter a valid 10-digit mobile number.</div>
+        </div>
+        <div class="auth-field">
+          <label>Email Address</label>
+          <input type="email" id="regEmail" placeholder="you@example.com" autocomplete="email">
+          <div class="auth-err" id="regEmailErr">Please enter a valid email.</div>
+        </div>
+        <div class="auth-field">
+          <label>Password</label>
+          <input type="password" id="regPass" placeholder="Minimum 6 characters" autocomplete="new-password">
+          <div class="auth-err" id="regPassErr">Password must be at least 6 characters.</div>
+        </div>
+        <div class="auth-err" id="regGenErr" style="margin-bottom:10px;"></div>
+        <button class="auth-submit" onclick="doRegister()"><i class="fa-solid fa-user-plus"></i> &nbsp;Create Account</button>
+        <div class="auth-switch">Already have an account? <a onclick="switchAuthTab('login')">Login</a></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- User Dropdown (desktop) -->
+<div class="user-dropdown" id="userDropdown">
+  <div class="ud-header">
+    <strong id="udName">User</strong>
+    <span id="udEmail">email</span>
+  </div>
+  <div class="ud-item" onclick="closeUserDropdown()"><i class="fa-solid fa-box"></i> My Orders</div>
+  <div class="ud-item" onclick="openWishlist();closeUserDropdown()"><i class="fa-regular fa-heart"></i> Wishlist</div>
+  <div class="ud-item" onclick="closeUserDropdown()"><i class="fa-solid fa-location-dot"></i> Saved Addresses</div>
+  <div class="ud-item logout" onclick="doLogout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</div>
+</div>
 
 <!-- Ayurveda Offer Popup -->
 <div class="offer-popup-ov" id="offerPopupAyu" onclick="closeOfferOnOverlay(event,'offerPopupAyu')">
@@ -2765,6 +3185,154 @@ init();
 </div>
 
 <script>
+function _showToast(m){showToast(m);}
+
+// ====== AUTH LOGIC ======
+let _currentUser = null;
+
+function _loadUser() {
+  try { _currentUser = JSON.parse(localStorage.getItem('da_user') || 'null'); } catch(e){_currentUser=null;}
+}
+function _saveUser(u) { localStorage.setItem('da_user', JSON.stringify(u)); _currentUser = u; }
+function _getAccounts() {
+  try { return JSON.parse(localStorage.getItem('da_accounts') || '{}'); } catch(e){ return {}; }
+}
+function _saveAccounts(acc) { localStorage.setItem('da_accounts', JSON.stringify(acc)); }
+
+function openAuthModal() {
+  _loadUser();
+  if (_currentUser) { toggleUserDropdown(); return; }
+  document.getElementById('authOverlay').classList.add('on');
+  switchAuthTab('login');
+}
+function closeAuthModal() { document.getElementById('authOverlay').classList.remove('on'); }
+function closeAuthOnOverlay(e) { if(e.target===document.getElementById('authOverlay')) closeAuthModal(); }
+
+function switchAuthTab(tab) {
+  document.getElementById('tabLogin').classList.toggle('active', tab==='login');
+  document.getElementById('tabRegister').classList.toggle('active', tab==='register');
+  document.getElementById('panelLogin').classList.toggle('on', tab==='login');
+  document.getElementById('panelRegister').classList.toggle('on', tab==='register');
+  // clear errors
+  ['loginEmailErr','loginPassErr','loginGenErr','regNameErr','regPhoneErr','regEmailErr','regPassErr','regGenErr'].forEach(id=>{
+    const el=document.getElementById(id); el.classList.remove('on'); el.textContent=el.textContent;
+  });
+  ['loginEmail','loginPass','regName','regPhone','regEmail','regPass'].forEach(id=>{
+    document.getElementById(id).classList.remove('err');
+  });
+}
+
+function doLogin() {
+  let ok = true;
+  const email = document.getElementById('loginEmail').value.trim();
+  const pass  = document.getElementById('loginPass').value;
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    document.getElementById('loginEmail').classList.add('err');
+    document.getElementById('loginEmailErr').classList.add('on'); ok=false;
+  } else {
+    document.getElementById('loginEmail').classList.remove('err');
+    document.getElementById('loginEmailErr').classList.remove('on');
+  }
+  if (pass.length < 6) {
+    document.getElementById('loginPass').classList.add('err');
+    document.getElementById('loginPassErr').classList.add('on'); ok=false;
+  } else {
+    document.getElementById('loginPass').classList.remove('err');
+    document.getElementById('loginPassErr').classList.remove('on');
+  }
+  if (!ok) return;
+  const accounts = _getAccounts();
+  const key = email.toLowerCase();
+  if (!accounts[key] || accounts[key].pass !== pass) {
+    const err = document.getElementById('loginGenErr');
+    err.textContent = accounts[key] ? 'Incorrect password. Please try again.' : 'No account found with this email. Please create one.';
+    err.classList.add('on'); return;
+  }
+  document.getElementById('loginGenErr').classList.remove('on');
+  _saveUser({name: accounts[key].name, email: key});
+  closeAuthModal();
+  _updateAccountUI();
+  _showToast('Welcome back, ' + accounts[key].name.split(' ')[0] + '! 👋');
+}
+
+function doRegister() {
+  let ok = true;
+  const name  = document.getElementById('regName').value.trim();
+  const phone = document.getElementById('regPhone').value.trim();
+  const email = document.getElementById('regEmail').value.trim();
+  const pass  = document.getElementById('regPass').value;
+  if (name.length < 2) { document.getElementById('regName').classList.add('err'); document.getElementById('regNameErr').classList.add('on'); ok=false; }
+  else { document.getElementById('regName').classList.remove('err'); document.getElementById('regNameErr').classList.remove('on'); }
+  if (!/^\d{10}$/.test(phone)) { document.getElementById('regPhone').classList.add('err'); document.getElementById('regPhoneErr').classList.add('on'); ok=false; }
+  else { document.getElementById('regPhone').classList.remove('err'); document.getElementById('regPhoneErr').classList.remove('on'); }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { document.getElementById('regEmail').classList.add('err'); document.getElementById('regEmailErr').classList.add('on'); ok=false; }
+  else { document.getElementById('regEmail').classList.remove('err'); document.getElementById('regEmailErr').classList.remove('on'); }
+  if (pass.length < 6) { document.getElementById('regPass').classList.add('err'); document.getElementById('regPassErr').classList.add('on'); ok=false; }
+  else { document.getElementById('regPass').classList.remove('err'); document.getElementById('regPassErr').classList.remove('on'); }
+  if (!ok) return;
+  const accounts = _getAccounts();
+  const key = email.toLowerCase();
+  if (accounts[key]) {
+    const err = document.getElementById('regGenErr');
+    err.textContent = 'This email is already registered. Please login.';
+    err.classList.add('on'); return;
+  }
+  accounts[key] = {name, phone, pass};
+  _saveAccounts(accounts);
+  _saveUser({name, email: key});
+  closeAuthModal();
+  _updateAccountUI();
+  _showToast('Account created! Welcome, ' + name.split(' ')[0] + '! 🌿');
+}
+
+function doLogout() {
+  localStorage.removeItem('da_user');
+  _currentUser = null;
+  closeUserDropdown();
+  _updateAccountUI();
+  _showToast('You have been logged out.');
+}
+
+function _updateAccountUI() {
+  _loadUser();
+  const icon = document.getElementById('accountIcon');
+  const lbl  = document.getElementById('accountLbl');
+  if (_currentUser) {
+    icon.innerHTML = '<i class="fa-solid fa-circle-user" style="color:var(--green-mid)"></i><span class="hdr-icon-lbl" id="accountLbl" style="color:var(--green-dark);font-weight:700;">' + _currentUser.name.split(' ')[0] + '</span>';
+    icon.classList.add('logged-in');
+    document.getElementById('udName').textContent  = _currentUser.name;
+    document.getElementById('udEmail').textContent = _currentUser.email;
+  } else {
+    icon.innerHTML = '<i class="fa-regular fa-user"></i><span class="hdr-icon-lbl" id="accountLbl">Account</span>';
+    icon.classList.remove('logged-in');
+  }
+}
+
+function toggleUserDropdown() {
+  const dd = document.getElementById('userDropdown');
+  const icon = document.getElementById('accountIcon');
+  dd.classList.toggle('on');
+  if (dd.classList.contains('on')) {
+    const rect = icon.getBoundingClientRect();
+    dd.style.position = 'fixed';
+    dd.style.top  = (rect.bottom + 6) + 'px';
+    dd.style.right = (window.innerWidth - rect.right) + 'px';
+    setTimeout(()=>document.addEventListener('click', _ddOutsideClick), 10);
+  }
+}
+function closeUserDropdown() {
+  document.getElementById('userDropdown').classList.remove('on');
+  document.removeEventListener('click', _ddOutsideClick);
+}
+function _ddOutsideClick(e) {
+  const dd = document.getElementById('userDropdown');
+  const icon = document.getElementById('accountIcon');
+  if (!dd.contains(e.target) && !icon.contains(e.target)) closeUserDropdown();
+}
+
+// Init on load
+window.addEventListener('DOMContentLoaded', _updateAccountUI);
+
 // ====== OFFER POPUP LOGIC ======
 const _shownPopups = new Set();
 
